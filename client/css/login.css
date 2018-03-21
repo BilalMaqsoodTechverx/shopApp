@@ -1,0 +1,19 @@
+body{
+		color: #fff;
+		background: #3598dc;
+	}
+
+	.login-form{
+		width: 390px;
+		margin: 150px auto;
+	}
+	.login-form form{
+		color: #999;
+    	margin-bottom: 15px;
+        background: #fff;
+        padding: 30px;
+    }
+    .login-form h2 {
+		color: #333;
+        margin-top: 0;
+    }
