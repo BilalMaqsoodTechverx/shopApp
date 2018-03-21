@@ -27,13 +27,13 @@ var UserSchema = new mongoose.Schema({
     default: 'Client',
     required: true,
   },
-  Status:{
+  status:{
     type: String,
     enum: ['Active','InActive','Suspended'],
     default: 'Active'
   },
   creditCard:{
-    type: Number
+    type: String
    },
   
 },{timestamps: true});
