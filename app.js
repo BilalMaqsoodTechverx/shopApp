@@ -11,18 +11,22 @@ mongoose.connect('mongodb://localhost/shopApp')
   .catch((err) => console.error(err));
 
 app.get('/', function (req, res) {
-  res.send('Shop App')
+  res.send('Shop App');
 })
 
 var userSignup = require('./routes/auth/signup');
 var userLogin = require('./routes/auth/login');
 var getUsers = require('./routes/user/getUsers');
 var findUser = require('./routes/user/findUser');
+var deleteUser = require('./routes/user/deleteUser');
+var updateUser = require('./routes/user/updateUser');
+
 app.use('/api', userSignup);
 app.use('/api', userLogin);
 app.use('/api', getUsers);
 app.use('/api', findUser);
-
+app.use('/api', deleteUser);
+app.use('/api', updateUser);
 
 app.listen(8000, function() {
 	console.log('Example app listening on port 8000!')

@@ -15,7 +15,7 @@ router.post('/login', function(req, res, next) {
     	console.log(err);
     }
     else{
-    	res.send(userObj);
+    	res.send(userObj.name);
     }
    
   }));

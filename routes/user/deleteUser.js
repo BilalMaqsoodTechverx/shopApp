@@ -9,13 +9,17 @@ var bodyParser = require('body-parser');
 
 
 
-router.post('/user', function(req, res, next) {
-    user.findOne({ _id : req.body._id},( function (err, userObj) {
+router.post('/user/delete', function(req, res) {
+    user.findByIdAndRemove({ _id : req.body._id},( function (err, userObj) {
+   
     if (err){
-    	res.send('Invali Id');
+    	console.log('Invali Id', err);
     }
+    else if(userObj){
+    	res.send('Successfully deleted');
+      }
     else{
-    	res.send(userObj);
+    	res.send('Id not found');
     }
    
   }));
