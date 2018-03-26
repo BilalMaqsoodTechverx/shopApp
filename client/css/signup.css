@@ -1,0 +1,24 @@
+body{
+		color: #fff;
+		background: #3598dc;
+	}
+
+	.signup-form{
+		width: 390px;
+		margin: 30px auto;
+	}
+	.signup-form form{
+		color: #999;
+    	margin-bottom: 15px;
+        background: #fff;
+        padding: 30px;
+    }
+     .signup-form h2 {
+		color: #333;
+        margin-top: 0;
+    }
+
+	  .signup-form .text {
+		padding-bottom: 15px;
+		text-align: center;
+    }
